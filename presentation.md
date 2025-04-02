@@ -639,7 +639,7 @@ Imaginons que vous ayez travaillé sur le projet, vous avez _commit_ votre trava
 Vous allez **pousser** votre travail sur le remote.
 
 ```bash
-$ git push origin master
+$ git push origin main
 Enumerating objects: 12, done.
 Counting objects: 100% (12/12), done.
 Delta compression using up to 8 threads
@@ -647,24 +647,44 @@ Compressing objects: 100% (11/11), done.
 Writing objects: 100% (12/12), 562.99 KiB | 4.94 MiB/s, done.
 Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
 remote:
-remote: Create a pull request for 'master' on GitHub by visiting:
-remote:      https://github.com/Tazoeur/cours-git/pull/new/master
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/Tazoeur/cours-git/pull/new/main
 remote:
-To github.com:Tazoeur/cours-git.git
- * [new branch]      master -> master
 ```
 
-4. Utiliser git
+---
 
-* push
-* pull
-* fetch
+### `git pull`
 
-PAUSE EXERCICE
+Maintenant imaginons que quelqu'un d'autre a travaillé sur le projet, et vous aimeriez récupérer sur votre machine le travail qui a été fait.
+
+```bash
+$ git pull origin main
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 18 (delta 3), reused 18 (delta 3), pack-reused 0 (from 0)
+Unpacking objects: 100% (18/18), 569.84 KiB | 1.54 MiB/s, done.
+From github.com:Tazoeur/cours-git
+ * branch            main       -> FETCH_HEAD
+   658324e..da644a2  main       -> origin/main
+Updating 658324e..da644a2
+Fast-forward
+ images/decentralised.png        | Bin 0 -> 199385 bytes
+ images/git-commit-branch.png    | Bin 0 -> 59767 bytes
+ images/git-file-states.png      | Bin 0 -> 21550 bytes
+ presentation.md                 | 701 ++++++++++++++++++++++++                                              
+ 10 files changed, 701 insertions(+)
+ create mode 100644 images/decentralised.png
+ create mode 100644 images/github-create-repo.png
+ create mode 100644 images/github-git-clone.png
+ create mode 100644 presentation.md
+```
+
+---
 
 5. Les merges
 
-* git clone
 * résoudre des conflits
 * pull request
 * code review
