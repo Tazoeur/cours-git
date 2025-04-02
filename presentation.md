@@ -632,6 +632,28 @@ origin  git@github.com:Tazoeur/cours-git.git (push)
 
 ---
 
+### `git push`
+
+Imaginons que vous ayez travaillé sur le projet, vous avez _commit_ votre travail et vous voulez le partager avec le reste du monde.
+
+Vous allez **pousser** votre travail sur le remote.
+
+```bash
+$ git push origin master
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (12/12), 562.99 KiB | 4.94 MiB/s, done.
+Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Tazoeur/cours-git/pull/new/master
+remote:
+To github.com:Tazoeur/cours-git.git
+ * [new branch]      master -> master
+```
+
 4. Utiliser git
 
 * push
