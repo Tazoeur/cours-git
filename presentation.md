@@ -33,7 +33,8 @@ p {
 1. Introduction
 2. Git en local
 3. Git à plusieurs
-4. Les problèmes
+4. Gitflow
+5. Conclusion
 
 ---
 
@@ -683,39 +684,105 @@ Fast-forward
 
 ---
 
-5. Les merges
+### C'est quoi un _fork_
 
-* résoudre des conflits
-* pull request
-* code review
+Un fork est une copie d'un _remote_ maintenu par un autre compte github.
 
-PAUSE EXERCICE
-7. Le workflow
+Par exemple vous avez _clone_ [ce cours](https://github.com/Tazoeur/cours-git) et l'avez amélioré. Vous aimeriez maintenant que votre travail soit inclu et disponible pour tout le monde.
 
-* gitflow workflow
+Mais vous n'avez pas les droits pour pousser sur ce _repository_, vous allez donc créer un _fork_.
+
+Généralement vous allez _fork_ un projet pour y contribuer sans en prendre en charge la maintenance du projet.
+
+Vous allez alors travailler avec plusieurs _remote_, et il vous sera possible de _pull_ les modifications faites dans les différents _remotes_.
 
 ---
-<!-- header: Git > Les problèmes -->
+![bg fit right:35%](./images/github_pr.png)
+
+### C'est quoi une _pull request_
+
+Le processus qui permet de proposer des changements à un auteur d'un repository _forké_ s'appelle _**pull request**_ et est géré de la même façon qu'une _issue_ github.
+Donc c'est une page spéciale sur la vue du projet, identifiée via un numéro unique, et sur laquelle il est possible de discuter des modifications qui sont faites.
+
+Dans le processus d'acceptation d'une PR, on trouve généralement une _code review_, c'est à dire une relecture du code soumis dans la PR.
+
+---
+
+## Exercice
+
+![bg fit right:74.6%](./images/github-recettes.png)
+
+[lien](https://github.com/Tazoeur/recettes)
+
+---
+
+<!-- header: Git > Gitflow -->
 <!-- _header: '' -->
 <!-- _paginate: false -->
 <!-- _class: moon -->
-# Les problèmes
+# Gitflow
 
 ---
 
-* git commit --amend
-* git rebase
-* git reflog
-* git reset
+### Gitflow
+
+C'est une façon de travailler avec git qui apporte structure et clareté.
+
+On va se baser sur l'explication d'[Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+
+---
+![bg fit](./images/gitflow_simple.png)
+
+---
+![bg fit](./images/gitflow_features.png)
+
+---
+![bg fit](./images/gitflow_release.png)
+
+---
+![bg fit](./images/gitflow_hotfix.png)
+
+---
+<!-- header: Git > Conclusion -->
+<!-- _header: '' -->
+<!-- _paginate: false -->
+<!-- _class: moon -->
+# Conclusion
+
+---
+
+Vous savez
+
+* `add` des fichiers modifiés
+* `commit` votre travail
+* `push` vers un _**remote**_
+* `pull` depuis un _**remote**_
+* `status` pour voir l'état de votre _**repository**_
+* `log` pour voir l'historique des _**commits**_
+* `checkout` pour naviguer votre `HEAD` vers un _**commit**_
+* `switch` pour naviguer votre `HEAD` vers une **branche**
+* `branch` pour créer des **branches**
 
 ---
 
 ### Ce qui n'a pas été vu
 
+* `git rebase`
 * `git stash`
 * `git submodules`
 * git hooks
+* `git reset`
+* résoudre des conflits
 * sign with gpg key
 * configuration via `~/.gitconfig`
 * partial staging
 * _cette liste n'est pas exhaustive_
+
+---
+
+### Liens utiles
+
+* [pdf git cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
+* [oh shit git](https://ohshitgit.com/)
+* [documentation](https://git-scm.com/docs)
+* [jeu git branching](https://learngitbranching.js.org/?locale=fr_FR)
